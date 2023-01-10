@@ -6,46 +6,64 @@
     <meta name="description" content="Créer votre liste de cadeaux et envoyez-là à vos ami.e.s">
     <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <a class="navbar-brand" href="#">L'Atelier du bonheur Mercantile</a>
-    <div>
-      <p class="nav-item">
-        <a class="nav-link active" href="#">Ma liste</a>
-      </p>
-      <p class="nav-item">
-        <a class="nav-link" aria-current="page" href="#">Listes de mes ami.e.s</a>
-      </p>
+  <header>
+    <ul class="enteteMenu">
+      <li>L'Atelier du bonheur Mercantile</li>
+      <li>Ma liste</li>
+      <li>Listes de mes ami.e.s</li>
+    </ul>
+  </header>
+<main>
+  <div>
+    <h1>Ma liste de cadeaux interactive</h1>
+  </div>
+  <p class="text-muted ms-1 mb-3">Ajouter des items à votre liste de cadeaux souhaités puis envoyez votre liste à vos
+    ami.e.s.</p>
+  <div id="allForm">
+    <div id="gauche">
+      <h2 class="mb-3">Ajouter un item à la liste</h2>
+      <form action="">
+        <div class="mb-3">
+          <label>Description :</label><br>
+          <input type="text" id="desc" name="essai" required>
+        </div>
+        <div class="mb-4">
+          <label>Valeur estimée ($) :</label><br>
+          <input type="number" id="valeur">
+        </div>
+        <div id="butonAjou">
+          <button>Ajouter</button>
+          <br>
+          <button>Annuler</button>
+        </div>
+      </form>
     </div>
-    <h3>Ma liste de cadeaux interactive de Oumar</h3>
-    <p class="text-muted ms-1 mb-3">Ajouter des items à votre liste de cadeaux souhaités puis envoyez votre liste à vos
-                                    ami.e.s.</p>
-    <h4 class="mb-3">Ajouter un item à la liste</h4>
-    <div class="mb-3">
-      <p>Description :</p>
-      <input type="text" id="desc" name="essai" required></input>
+
+    <div id="droite">  <h2>Ma liste</h2>
+      <ul id="listeItems">
+        <li>Crocs des fêtes : <span>14$</span></li>
+        <li>Une tuque des fêtes :<span>42$</span></li>
+        <li>Un chandail laid des fêtes :<span>25$</span></li>
+        <li id="total">Total: 81$</li>
+      </ul>
+      <form action="" id="formdestin">
+        <div>
+          <label class="col-form-label h3">Destinataire:</label>
+          <input id="email" type="text">
+        </div>
+        <div>
+          <button>Confirmer et envoyer</button>
+          <button>Recommencer</button>
+        </div>
+      </form>
     </div>
-    <div class="mb-4">
-      <span>Valeur estimée ($) :</span><br>
-      <input type="number" id="valeur">
-    </div>
-    <div class="d-grid gap-2">
-      <button>Ajouter</button>
-      <br>
-      <button>Annuler</button>
-    </div>
-    <h3>Ma liste</h3>
-    <p class="list">
-      <p>Crocs des fêtes : <span>14$</span></p>
-      <p>Une tuque des fêtes :<span>42$</span></p>
-      <p>Un chandail laid des fêtes :<span>25$</span></p>
-      <p>Total: 81$</p>
-    </p>
-    <p class="col-form-label h3">Destinataire:</p>
-    <input id="email" type="text">
-    <div>
-      <button>Confirmer et envoyer</button>
-      <button>Recommencer</button>
-    </div>
+  </div>
+</main>
+
+
+
   </body>
 </html>
