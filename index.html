@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+  <form method="post">
   <header>
     <ul class="enteteMenu">
       <li><a href="#">L'Atelier du bonheur Mercantile</a></li>
@@ -16,7 +17,7 @@
       <li><a href="#">Listes de mes ami.e.s</a></li>
     </ul>
   </header>
-<main>
+
   <div>
     <h1>Ma liste de cadeaux interactive</h1>
   </div>
@@ -28,16 +29,16 @@
 
         <div class="mb-3">
           <label>Description :</label><br>
-          <input type="text" id="desc" name="essai" required>
+          <input type="text" id="desc" >
         </div>
         <div class="mb-4">
           <label>Valeur estimée ($) :</label><br>
           <input type="number" id="valeur">
         </div>
         <div id="butonAjou">
-          <button id="ajout" onclick="ajouter()">Ajouter</button>
+          <input type="button" value="ajouter" onclick="ajouter()">
           <br>
-          <button>Annuler</button>
+          <button type="reset" value="annuler">Annuler</button>
         </div>
 
     </div>
@@ -53,19 +54,22 @@
       </div>
       <p>Total: <span id="monTotal">81</span>$ </p>
 
-      <form action="" id="formdestin">
         <div>
           <label class="col-form-label h3">Destinataire:</label>
-          <input id="email" type="text">
+          <input id="email" type="email" required onblur="ajouterEmail()">
         </div>
         <div>
-          <button>Confirmer et envoyer</button>
-          <button>Recommencer</button>
+          <input type="submit" value="confirmer et envoyer">
+          <input type="submit" onclick="effacer()" value="Recommencer"><!--effacer le courriel et refrech-->
         </div>
-      </form>
     </div>
   </div>
-</main>
+
+    <input hidden name="item1" value="Crocs des fêtes">
+    <input hidden name="item2" value="Une tuque des fêtes :">
+    <input hidden name="item3" value="Un chandail laid des fêtes">
+  </form>
+
 
 
 
